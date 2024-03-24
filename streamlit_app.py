@@ -47,7 +47,7 @@ def get_person_name():
 
     query_params = st.query_params
 
-    return query_params.get("name", "Abuela")
+    return query_params.get("name", "Mario")
 
     
 
