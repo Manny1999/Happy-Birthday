@@ -74,7 +74,10 @@ with open(CSS_FILE) as f:
 
 PERSON_NAME = get_person_name()
 
-st.header(f"Happy Birthday, {PERSON_NAME}! 🎉", anchor=False)
+st.markdown(
+    f"<h1 style='text-align: center;'>Happy Birthday, {PERSON_NAME}! 🎉</h1>",
+    unsafe_allow_html=True,
+)
 
 
 
@@ -89,7 +92,10 @@ st_lottie(lottie_animation, key="lottie-holiday", height=300)
 # Birthday messaged
 
 st.markdown(
-
-    f"Dear {PERSON_NAME}, wishing you a wonderfull birthday filled with joy anf happyness. 🎂"
-
+    (
+        "<p style='text-align: center; font-size: 1.2rem; font-weight: 600;'>"
+        f"Dear {PERSON_NAME}, wishing you a wonderfull birthday filled with joy anf happyness. 🎂"
+        "</p>"
+    ),
+    unsafe_allow_html=True,
 )
